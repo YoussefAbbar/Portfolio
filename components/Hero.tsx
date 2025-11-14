@@ -39,44 +39,32 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
     >
-      {/* Animated background */}
+      {/* Animated background - Apple style */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-secondary-50 to-accent-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-primary-50 to-white dark:from-black dark:via-primary-900 dark:to-black" />
+        <motion.div
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute top-1/4 -left-20 w-96 h-96 bg-secondary-400 dark:bg-secondary-600 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-20"
+        />
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            rotate: [0, 90, 0],
+            opacity: [0.2, 0.4, 0.2],
           }}
           transition={{
-            duration: 20,
+            duration: 10,
             repeat: Infinity,
-            ease: "linear",
+            ease: "easeInOut",
           }}
-          className="absolute top-1/4 -left-20 w-72 h-72 bg-primary-300 dark:bg-primary-900 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-30"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            rotate: [0, -90, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute top-1/3 -right-20 w-72 h-72 bg-secondary-300 dark:bg-secondary-900 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-30"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.4, 1],
-            rotate: [0, 180, 0],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute -bottom-20 left-1/2 w-72 h-72 bg-accent-300 dark:bg-accent-900 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-30"
+          className="absolute top-1/3 -right-20 w-96 h-96 bg-secondary-300 dark:bg-secondary-700 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-20"
         />
       </div>
 
@@ -89,8 +77,8 @@ export default function Hero() {
       >
         <div className="text-center">
           {/* Greeting */}
-          <motion.div variants={itemVariants} className="mb-4">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 font-medium text-sm">
+          <motion.div variants={itemVariants} className="mb-6">
+            <span className="inline-block px-5 py-2 rounded-full bg-primary-100 dark:bg-primary-800/50 text-secondary-600 dark:text-secondary-400 font-medium text-sm tracking-wide">
               Welcome to my portfolio
             </span>
           </motion.div>
@@ -127,19 +115,19 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               onClick={handleContactClick}
-              className="px-8 py-3 bg-gradient-to-r from-primary-600 to-secondary-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow"
+              className="px-8 py-3.5 bg-secondary-500 hover:bg-secondary-600 text-white rounded-xl font-medium transition-all duration-200 shadow-sm hover:shadow-md"
             >
               Get in Touch
             </motion.button>
             <motion.a
-              href="/resume.pdf"
+              href="/CV_Youssef_ABBAR_Developpeur_FullStack_AWS_Alternance.pdf"
               download
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 rounded-full font-medium hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="px-8 py-3.5 bg-primary-100 hover:bg-primary-200 dark:bg-primary-800 dark:hover:bg-primary-700 text-secondary-600 dark:text-secondary-400 rounded-xl font-medium transition-all duration-200"
             >
               Download CV
             </motion.a>
@@ -148,35 +136,35 @@ export default function Hero() {
           {/* Social Links */}
           <motion.div
             variants={itemVariants}
-            className="flex gap-6 justify-center"
+            className="flex gap-4 justify-center"
           >
             <motion.a
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
-              className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-3 rounded-full bg-primary-100 dark:bg-primary-800 text-primary-900 dark:text-primary-100 hover:bg-secondary-100 dark:hover:bg-secondary-800 hover:text-secondary-600 dark:hover:text-secondary-400 transition-all duration-200"
             >
-              <FiLinkedin size={24} />
+              <FiLinkedin size={22} />
             </motion.a>
             <motion.a
               href={personalInfo.upwork}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.2, rotate: -5 }}
-              whileTap={{ scale: 0.9 }}
-              className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-3 rounded-full bg-primary-100 dark:bg-primary-800 text-primary-900 dark:text-primary-100 hover:bg-secondary-100 dark:hover:bg-secondary-800 hover:text-secondary-600 dark:hover:text-secondary-400 transition-all duration-200"
             >
-              <FiExternalLink size={24} />
+              <FiExternalLink size={22} />
             </motion.a>
             <motion.a
               href={`mailto:${personalInfo.email}`}
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
-              className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-3 rounded-full bg-primary-100 dark:bg-primary-800 text-primary-900 dark:text-primary-100 hover:bg-secondary-100 dark:hover:bg-secondary-800 hover:text-secondary-600 dark:hover:text-secondary-400 transition-all duration-200"
             >
-              <FiMail size={24} />
+              <FiMail size={22} />
             </motion.a>
           </motion.div>
         </div>

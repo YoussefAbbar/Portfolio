@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { personalInfo, education, certifications } from '@/lib/data';
-import { FiAward, FiBookOpen } from 'react-icons/fi';
+import { personalInfo } from '@/lib/data';
 
 export default function About() {
   const [ref, inView] = useInView({
@@ -119,67 +118,6 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* Education */}
-          <motion.div variants={itemVariants} className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
-              <FiBookOpen className="text-primary-600 dark:text-primary-400" size={32} />
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
-                Education
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {education.map((edu, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.02 }}
-                  className="p-6 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 transition-colors"
-                >
-                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    {edu.degree}
-                  </h4>
-                  <p className="text-primary-600 dark:text-primary-400 font-medium mb-1">
-                    {edu.institution}
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-400 mb-2">
-                    {edu.field}
-                  </p>
-                  <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-500">
-                    <span>{edu.duration}</span>
-                    <span>{edu.location}</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Certifications */}
-          <motion.div variants={itemVariants}>
-            <div className="flex items-center gap-3 mb-8">
-              <FiAward className="text-secondary-600 dark:text-secondary-400" size={32} />
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
-                Certifications
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {certifications.map((cert, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, rotate: 2 }}
-                  className="p-4 rounded-lg bg-gradient-to-br from-secondary-50 to-accent-50 dark:from-secondary-900/20 dark:to-accent-900/20 border border-secondary-200 dark:border-secondary-800 text-center"
-                >
-                  <FiAward className="mx-auto mb-3 text-secondary-600 dark:text-secondary-400" size={24} />
-                  <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-1">
-                    {cert.name}
-                  </h4>
-                  <p className="text-xs text-gray-600 dark:text-gray-400">
-                    {cert.issuer}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

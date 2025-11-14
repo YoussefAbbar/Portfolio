@@ -67,14 +67,34 @@ export default function Projects() {
               >
                 {/* Project Card */}
                 <div className="h-full p-6 rounded-2xl bg-white dark:bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 flex flex-col">
-                  {/* Project Image */}
-                  {project.image && (
+                  {/* Project Images */}
+                  {(project.image || project.images) && (
                     <div className="mb-4 rounded-xl overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
+                      {project.images ? (
+                        <div className="grid grid-cols-2 gap-2">
+                          {project.images.map((img, imgIndex) => (
+                            <a
+                              key={imgIndex}
+                              href={img}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="cursor-pointer"
+                            >
+                              <img
+                                src={img}
+                                alt={`${project.title} ${imgIndex + 1}`}
+                                className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                            </a>
+                          ))}
+                        </div>
+                      ) : (
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      )}
                     </div>
                   )}
 

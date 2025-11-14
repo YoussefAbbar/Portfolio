@@ -37,14 +37,14 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Gradient text */
+/* Gradient text - Apple style */
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-900 via-secondary-600 to-primary-700;
 }
 
-/* Animated gradient background */
+/* Animated gradient background - subtle Apple style */
 .gradient-bg {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #f5f5f7, #e8e8ed, #0071e3, #006edb);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
