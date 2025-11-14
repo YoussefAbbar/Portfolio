@@ -70,15 +70,21 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     id: "1",
-    title: "AWS Marketplace Data Feed Transformation",
-    description: "Orchestrated a transformative serverless SaaS project to process AWS Marketplace data feeds, creating insightful dashboards for sellers.",
-    technologies: ["AWS Glue", "AWS Athena", "AWS Lambda", "AWS QuickSight", "AWS Cognito", "DynamoDB", "CloudFormation"],
+    title: "CloudSmart - AWS Marketplace Management Platform",
+    description: "Comprehensive cloud management platform that helps AWS partners manage their marketplace presence, private offers, and customer engagement. Orchestrated a transformative serverless SaaS project to process AWS Marketplace data feeds, creating insightful dashboards for sellers. Featured in AWS Marketplace blog for innovative use of AWS Marketplace APIs.",
+    technologies: ["Angular", "AWS Glue", "AWS Athena", "AWS Lambda", "AWS QuickSight", "AWS Cognito", "DynamoDB", "CloudFormation", "AWS Marketplace APIs", "SES", "SNS", "TypeScript"],
     features: [
       "Developed YAML templates for automated deployment with and without pre-existing S3 buckets",
       "Engineered automated ETL process triggered by data feed reception",
       "Created multi-tenant SaaS application with personalized tenant dashboards",
-      "Implemented secure authentication using AWS Cognito",
-      "Integrated QuickSight dashboards into SaaS application"
+      "Private Offer Campaign management with AWS Marketplace APIs integration",
+      "OTP authentication system for secure access",
+      "Well-Architected Framework integration with custom lens creation",
+      "Observability and monitoring dashboards with QuickSight",
+      "SaaS Quick Launch integration for rapid deployment",
+      "Usage metering and analytics for marketplace products",
+      "Partner CRM API integration for customer management",
+      "Featured in AWS Marketplace official blog"
     ],
     link: "https://aws.amazon.com/marketplace/pp/prodview-2pytus72jnwck"
   },
@@ -107,24 +113,7 @@ export const projects: Project[] = [
       "Implemented modern UI/UX design patterns",
       "Managed Quality Assurance processes"
     ],
-    image: "/1706134700517.jpeg"
-  },
-  {
-    id: "4",
-    title: "CloudSmart - AWS Marketplace Management Platform",
-    description: "Building a comprehensive cloud management platform that helps AWS partners manage their marketplace presence, private offers, and customer engagement. Featured in AWS Marketplace blog for innovative use of AWS Marketplace APIs.",
-    technologies: ["Angular", "AWS", "TypeScript", "AWS CloudFormation", "QuickSight", "SES", "SNS", "AWS Marketplace APIs"],
-    features: [
-      "Private Offer Campaign management with AWS Marketplace APIs integration",
-      "OTP authentication system for secure access",
-      "Well-Architected Framework integration with custom lens creation",
-      "Observability and monitoring dashboards with QuickSight",
-      "SaaS Quick Launch integration for rapid deployment",
-      "Usage metering and analytics for marketplace products",
-      "Partner CRM API integration for customer management",
-      "Featured in AWS Marketplace official blog"
-    ],
-    link: "https://www.cloudsmart.global/"
+    images: ["/1706134700517.jpeg", "/1706134750402.jpeg"]
   }
 ];
 
@@ -210,50 +199,70 @@ export const skills: Skill[] = [
 
 export const certifications: Certification[] = [
   {
-    name: "Ultimate AWS Certified Cloud Practitioner CLF-C02",
-    issuer: "AWS"
-  },
-  {
-    name: "AWS Educate Getting Started with Serverless",
+    name: "Introduction to Cloud 101",
     issuer: "AWS Educate"
   },
   {
-    name: "AWS Educate Getting Started with Storage",
+    name: "Getting Started with Storage",
+    issuer: "AWS Educate"
+  },
+  {
+    name: "Getting Started with Compute",
+    issuer: "AWS Educate"
+  },
+  {
+    name: "Getting Started with Databases",
+    issuer: "AWS Educate"
+  },
+  {
+    name: "Getting Started with Security",
+    issuer: "AWS Educate"
+  },
+  {
+    name: "Getting Started with Networking",
+    issuer: "AWS Educate"
+  },
+  {
+    name: "Getting Started with Serverless",
+    issuer: "AWS Educate"
+  },
+  {
+    name: "Getting Started with Cloud Ops",
     issuer: "AWS Educate"
   },
   {
     name: "Introduction to Front-End Development",
-    issuer: "Coursera/Meta"
+    issuer: "Meta"
   }
 ];
 
 export const education: Education[] = [
   {
-    institution: "Institut F2I",
-    degree: "Master 2 (M2)",
-    field: "Web Architect",
-    duration: "September 2025 - November 2026",
+    institution: "Institut F2I - École DSP",
+    degree: "Master 2 - Architecte Web (Titre RNCP niveau 7)",
+    field: "Web Architecture",
+    duration: "October 2025 - December 2026",
     location: "Vincennes, France"
   },
   {
-    institution: "IT Learning Academy",
-    degree: "Master's Degree",
+    institution: "Faculté des Sciences et Techniques - IT Learning",
+    degree: "Master 1 - Conception et Développement d'Applications",
     field: "Web Application Design and Development",
-    duration: "2022 - 2024",
-    location: "Morocco"
+    duration: "October 2022 - October 2024",
+    location: "Casablanca, Morocco"
   },
   {
-    institution: "FST Settat",
-    degree: "Bachelor's Degree",
-    field: "Science and Technology: Computer Engineering",
-    duration: "2020 - 2021",
+    institution: "Faculté des Sciences et Techniques",
+    degree: "Licence Sciences et Techniques - Génie Informatique",
+    field: "Computer Engineering",
+    duration: "October 2020 - July 2021",
     location: "Settat, Morocco"
   },
   {
-    institution: "FST Settat",
-    degree: "Associate's Degree",
-    field: "Mathematics, Computer Science, and Physics (MIP)",
-    duration: "2018 - 2020",
+    institution: "Faculté des Sciences et Techniques",
+    degree: "DEUST - Mathématiques, Informatique, Physique (MIP)",
+    field: "Mathematics, Computer Science, and Physics",
+    duration: "October 2018 - June 2020",
     location: "Settat, Morocco"
   }
 ];

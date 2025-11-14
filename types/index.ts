@@ -17,6 +17,7 @@ export interface Project {
   link?: string;
   github?: string;
   image?: string;
+  images?: string[];
 }
 
 export interface Skill {

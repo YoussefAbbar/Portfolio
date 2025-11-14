@@ -9,8 +9,10 @@ const navItems = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Education', href: '#education' },
+  { name: 'Certifications', href: '#certifications' },
 ];
 
 export default function Navigation() {
@@ -41,7 +43,7 @@ export default function Navigation() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg'
+          ? 'bg-white/70 dark:bg-black/70 backdrop-blur-xl shadow-sm border-b border-primary-200/20 dark:border-primary-800/20'
           : 'bg-transparent'
       }`}
     >
@@ -62,7 +64,7 @@ export default function Navigation() {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
@@ -70,13 +72,13 @@ export default function Navigation() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick(item.href);
                 }}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium cursor-pointer"
+                className="text-primary-900 dark:text-primary-100 hover:text-secondary-600 dark:hover:text-secondary-400 transition-all duration-200 font-medium cursor-pointer text-sm"
               >
                 {item.name}
               </motion.a>
@@ -107,19 +109,19 @@ export default function Navigation() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800"
+            className="md:hidden bg-white/90 dark:bg-black/90 backdrop-blur-xl border-t border-primary-200/20 dark:border-primary-800/20"
           >
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  whileHover={{ x: 10 }}
+                  whileHover={{ x: 8 }}
                   onClick={(e) => {
                     e.preventDefault();
                     handleNavClick(item.href);
                   }}
-                  className="block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium text-lg cursor-pointer"
+                  className="block text-primary-900 dark:text-primary-100 hover:text-secondary-600 dark:hover:text-secondary-400 transition-all duration-200 font-medium text-lg cursor-pointer"
                 >
                   {item.name}
                 </motion.a>

@@ -4,8 +4,10 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
+import Certifications from "@/components/Certifications";
 import Footer from "@/components/Footer";
 
 export const dynamic = 'force-dynamic';
@@ -17,8 +19,10 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
-      <Experience />
       <Projects />
+      <Experience />
+      <Education />
+      <Certifications />
       <Footer />
     </main>
   );
