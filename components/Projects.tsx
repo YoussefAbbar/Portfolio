@@ -67,6 +67,17 @@ export default function Projects() {
               >
                 {/* Project Card */}
                 <div className="h-full p-6 rounded-2xl bg-white dark:bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 flex flex-col">
+                  {/* Project Image */}
+                  {project.image && (
+                    <div className="mb-4 rounded-xl overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+
                   {/* Project Header */}
                   <div className="mb-4">
                     <div className="flex items-start justify-between mb-3">
