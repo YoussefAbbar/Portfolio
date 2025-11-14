@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   description: "Portfolio of Youssef ABBAR, a Full-Stack Developer and AWS Solutions Architect specializing in cloud-native SaaS applications, serverless architecture, and modern web development.",
   keywords: ["Full-Stack Developer", "AWS", "React", "Next.js", "Angular", "Cloud Architecture", "Serverless", "Portfolio"],
   authors: [{ name: "Youssef ABBAR" }],
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' }
+    ],
+    apple: [
+      { url: '/apple-icon.svg', type: 'image/svg+xml' }
+    ],
+  },
   openGraph: {
     title: "Youssef ABBAR - Full-Stack Developer & AWS Solutions Architect",
     description: "Portfolio of Youssef ABBAR, specializing in cloud-native applications and AWS solutions",

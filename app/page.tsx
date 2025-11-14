@@ -8,6 +8,7 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Certifications from "@/components/Certifications";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export const dynamic = 'force-dynamic';
@@ -23,6 +24,7 @@ export default function Home() {
       <Experience />
       <Education />
       <Certifications />
+      <Contact />
       <Footer />
     </main>
   );
