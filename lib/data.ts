@@ -79,19 +79,22 @@ export const projects: Project[] = [
       "Created multi-tenant SaaS application with personalized tenant dashboards",
       "Implemented secure authentication using AWS Cognito",
       "Integrated QuickSight dashboards into SaaS application"
-    ]
+    ],
+    link: "https://aws.amazon.com/marketplace/pp/prodview-2pytus72jnwck"
   },
   {
     id: "2",
-    title: "BookHunter Mobile App",
-    description: "Led development of a cross-platform mobile application for book scanning and discovery using React Native.",
+    title: "BookHunter - Sell, Buy & Rent Books",
+    description: "Led development of a cross-platform mobile application for book scanning, buying, selling, and renting books. Available on iOS App Store and Google Play Store.",
     technologies: ["React Native", "AWS Recognition", "TypeScript", "iOS", "Android"],
     features: [
       "Developed efficient ISBN scanner for barcodes and digit recognition",
       "Integrated AWS Recognition service for enhanced scanning accuracy",
       "Built cross-platform app supporting both iOS and Android",
-      "Implemented book discovery and tracking features"
-    ]
+      "Implemented book discovery and tracking features",
+      "Published on both Apple App Store and Google Play Store"
+    ],
+    link: "https://apps.apple.com/us/app/bookhunter-sell-buy-rent/id1659667251"
   },
   {
     id: "3",
@@ -103,22 +106,25 @@ export const projects: Project[] = [
       "Developed and modified components and pages",
       "Implemented modern UI/UX design patterns",
       "Managed Quality Assurance processes"
-    ]
+    ],
+    image: "/1706134700517.jpeg"
   },
   {
     id: "4",
-    title: "CloudSmart SaaS Platform",
-    description: "Building a comprehensive cloud management platform with features like private offers, well-architected reviews, and metering.",
-    technologies: ["Angular", "AWS", "TypeScript", "AWS CloudFormation", "QuickSight", "SES", "SNS"],
+    title: "CloudSmart - AWS Marketplace Management Platform",
+    description: "Building a comprehensive cloud management platform that helps AWS partners manage their marketplace presence, private offers, and customer engagement. Featured in AWS Marketplace blog for innovative use of AWS Marketplace APIs.",
+    technologies: ["Angular", "AWS", "TypeScript", "AWS CloudFormation", "QuickSight", "SES", "SNS", "AWS Marketplace APIs"],
     features: [
-      "Private Offer management with SES integration",
-      "OTP authentication system",
+      "Private Offer Campaign management with AWS Marketplace APIs integration",
+      "OTP authentication system for secure access",
       "Well-Architected Framework integration with custom lens creation",
-      "Observability and monitoring dashboards",
-      "SaaS Quick Launch integration",
-      "Usage metering and analytics",
-      "Partner CRM API integration"
-    ]
+      "Observability and monitoring dashboards with QuickSight",
+      "SaaS Quick Launch integration for rapid deployment",
+      "Usage metering and analytics for marketplace products",
+      "Partner CRM API integration for customer management",
+      "Featured in AWS Marketplace official blog"
+    ],
+    link: "https://www.cloudsmart.global/"
   }
 ];
 
