@@ -27,13 +27,6 @@ export default function Hero() {
     },
   };
 
-  const handleContactClick = () => {
-    const contactSection = document.querySelector('#contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section
       id="home"
@@ -114,14 +107,6 @@ export default function Hero() {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={handleContactClick}
-              className="px-8 py-3.5 bg-secondary-500 hover:bg-secondary-600 text-white rounded-xl font-medium transition-all duration-200 shadow-sm hover:shadow-md"
-            >
-              Get in Touch
-            </motion.button>
             <motion.a
               href="/CV_Youssef_ABBAR_Developpeur_FullStack_AWS_Alternance.pdf"
               download

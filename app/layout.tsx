@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Youssef ABBAR - Full-Stack Developer & AWS Solutions Architect",
+  title: "Youssef ABBAR",
   description: "Portfolio of Youssef ABBAR, a Full-Stack Developer and AWS Solutions Architect specializing in cloud-native SaaS applications, serverless architecture, and modern web development.",
   keywords: ["Full-Stack Developer", "AWS", "React", "Next.js", "Angular", "Cloud Architecture", "Serverless", "Portfolio"],
   authors: [{ name: "Youssef ABBAR" }],
